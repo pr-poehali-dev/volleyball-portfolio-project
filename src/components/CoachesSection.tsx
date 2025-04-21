@@ -1,83 +1,80 @@
 
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
+import { Twitter, Facebook, Instagram } from "lucide-react";
 
-type CoachProps = {
-  name: string;
-  position: string;
-  experience: string;
-  achievements: string;
-  photoUrl: string;
-};
-
-const coaches: CoachProps[] = [
+const coaches = [
   {
-    name: "Андрей Смирнов",
-    position: "Главный тренер",
+    name: "Алексей Волков",
+    role: "Главный тренер",
     experience: "15+ лет опыта",
-    achievements: "Мастер спорта международного класса, чемпион Европы",
-    photoUrl: "/placeholder.svg",
+    bio: "Мастер спорта, бывший игрок сборной России. Специализируется на развитии атакующих игроков и тактике командной игры.",
+    image: "https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?q=80&w=2376&auto=format&fit=crop&ixlib=rb-4.0.3",
+    socials: { twitter: "#", facebook: "#", instagram: "#" }
   },
   {
-    name: "Елена Волкова",
-    position: "Тренер по физической подготовке",
+    name: "Елена Смирнова",
+    role: "Тренер по технике",
     experience: "10+ лет опыта",
-    achievements: "Кандидат в мастера спорта, чемпионка региональных соревнований",
-    photoUrl: "/placeholder.svg",
+    bio: "Кандидат в мастера спорта, специалист по фундаментальной технике волейбола. Работает с игроками всех возрастов.",
+    image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3",
+    socials: { twitter: "#", facebook: "#", instagram: "#" }
   },
   {
-    name: "Сергей Петров",
-    position: "Тренер молодежной команды",
+    name: "Дмитрий Орлов",
+    role: "Тренер юношеской команды",
     experience: "8+ лет опыта",
-    achievements: "Мастер спорта, победитель международных турниров",
-    photoUrl: "/placeholder.svg",
-  },
+    bio: "Чемпион России среди юниоров, специалист по работе с молодыми спортсменами. Развивает дисциплину и командный дух.",
+    image: "https://images.unsplash.com/photo-1566492031773-4f4e44671857?q=80&w=2374&auto=format&fit=crop&ixlib=rb-4.0.3",
+    socials: { twitter: "#", facebook: "#", instagram: "#" }
+  }
 ];
-
-const CoachCard = ({ name, position, experience, achievements, photoUrl }: CoachProps) => {
-  return (
-    <Card className="overflow-hidden hover:shadow-lg transition-shadow">
-      <div className="aspect-[4/3] overflow-hidden">
-        <img 
-          src={photoUrl} 
-          alt={name} 
-          className="w-full h-full object-cover transition-transform hover:scale-105 duration-300"
-        />
-      </div>
-      <CardHeader className="flex flex-row items-center gap-4 pt-6">
-        <Avatar className="h-12 w-12 border-2 border-primary">
-          <AvatarImage src={photoUrl} />
-          <AvatarFallback>{name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
-        </Avatar>
-        <div>
-          <CardTitle className="text-xl">{name}</CardTitle>
-          <p className="text-sm text-muted-foreground">{position}</p>
-        </div>
-      </CardHeader>
-      <CardContent>
-        <div className="space-y-2">
-          <p className="font-medium">{experience}</p>
-          <p className="text-muted-foreground">{achievements}</p>
-        </div>
-      </CardContent>
-    </Card>
-  );
-};
 
 const CoachesSection = () => {
   return (
-    <section id="coaches" className="py-16">
+    <section id="coaches" className="py-20 bg-primary/5">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">Наши тренеры</h2>
+          <Separator className="mx-auto w-24 bg-accent h-1 mb-4" />
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Профессиональная команда тренеров поможет вам достичь новых высот в волейболе
+            Профессиональная команда тренеров с богатым опытом игры и подготовки спортсменов
           </p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {coaches.map((coach, index) => (
-            <CoachCard key={index} {...coach} />
+            <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <div className="h-64 overflow-hidden">
+                <img 
+                  src={coach.image} 
+                  alt={coach.name} 
+                  className="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold mb-1">{coach.name}</h3>
+                <div className="flex justify-between items-center mb-3">
+                  <span className="text-accent font-medium">{coach.role}</span>
+                  <span className="text-sm text-muted-foreground">{coach.experience}</span>
+                </div>
+                
+                <p className="text-gray-700 mb-4">{coach.bio}</p>
+                
+                <div className="flex justify-start space-x-4 text-gray-600">
+                  <a href={coach.socials.twitter} className="hover:text-accent transition-colors duration-200">
+                    <Twitter size={18} />
+                  </a>
+                  <a href={coach.socials.facebook} className="hover:text-accent transition-colors duration-200">
+                    <Facebook size={18} />
+                  </a>
+                  <a href={coach.socials.instagram} className="hover:text-accent transition-colors duration-200">
+                    <Instagram size={18} />
+                  </a>
+                </div>
+              </CardContent>
+            </Card>
           ))}
         </div>
       </div>

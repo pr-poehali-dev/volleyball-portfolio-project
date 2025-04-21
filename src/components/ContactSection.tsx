@@ -53,7 +53,7 @@ const ContactSection = () => {
                     rows={4}
                   />
                 </div>
-                <Button className="w-full">Отправить заявку</Button>
+                <Button className="w-full bg-accent hover:bg-accent/90 text-white">Отправить заявку</Button>
               </form>
             </CardContent>
           </Card>
@@ -62,11 +62,10 @@ const ContactSection = () => {
             <Card>
               <CardContent className="p-6">
                 <div className="flex items-start gap-4">
-                  <Phone className="h-6 w-6 text-primary shrink-0 mt-1" />
+                  <Phone className="h-6 w-6 text-accent shrink-0 mt-1" />
                   <div>
                     <h3 className="font-medium">Телефон</h3>
-                    <p className="text-muted-foreground">+7 (123) 456-78-90</p>
-                    <p className="text-muted-foreground">+7 (987) 654-32-10</p>
+                    <p className="text-muted-foreground">+7 (953) 790-45-30</p>
                   </div>
                 </div>
               </CardContent>
@@ -75,11 +74,11 @@ const ContactSection = () => {
             <Card>
               <CardContent className="p-6">
                 <div className="flex items-start gap-4">
-                  <Mail className="h-6 w-6 text-primary shrink-0 mt-1" />
+                  <Mail className="h-6 w-6 text-accent shrink-0 mt-1" />
                   <div>
                     <h3 className="font-medium">Email</h3>
-                    <p className="text-muted-foreground">info@volleyball-team.ru</p>
-                    <p className="text-muted-foreground">coach@volleyball-team.ru</p>
+                    <p className="text-muted-foreground">vanya.filimonov.09@bk.ru</p>
+                    <p className="text-muted-foreground">vanyafilimonov101@gmail.com</p>
                   </div>
                 </div>
               </CardContent>
@@ -88,10 +87,10 @@ const ContactSection = () => {
             <Card>
               <CardContent className="p-6">
                 <div className="flex items-start gap-4">
-                  <MapPin className="h-6 w-6 text-primary shrink-0 mt-1" />
+                  <MapPin className="h-6 w-6 text-accent shrink-0 mt-1" />
                   <div>
                     <h3 className="font-medium">Адрес</h3>
-                    <p className="text-muted-foreground">г. Москва, ул. Спортивная, д. 123</p>
+                    <p className="text-muted-foreground">г. Новосибирск, ул. Клубная, д. 39</p>
                     <p className="text-muted-foreground">Спортивный комплекс "Олимп"</p>
                   </div>
                 </div>
@@ -101,7 +100,7 @@ const ContactSection = () => {
             <Card>
               <CardContent className="p-6">
                 <div className="flex items-start gap-4">
-                  <Clock className="h-6 w-6 text-primary shrink-0 mt-1" />
+                  <Clock className="h-6 w-6 text-accent shrink-0 mt-1" />
                   <div>
                     <h3 className="font-medium">Время работы</h3>
                     <p className="text-muted-foreground">Пн-Пт: 09:00 - 22:00</p>

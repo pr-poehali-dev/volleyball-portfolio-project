@@ -1,70 +1,52 @@
 
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Trophy, Users, Calendar, Award } from "lucide-react";
+import { Separator } from "@/components/ui/separator";
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-16 bg-secondary">
+    <section id="about" className="py-20 bg-volleyball-pattern">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">О нашей волейбольной секции</h2>
+          <h2 className="text-3xl font-bold mb-4">О нашей секции</h2>
+          <Separator className="mx-auto w-24 bg-accent h-1 mb-4" />
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Наша волейбольная секция - это место, где растут чемпионы. Мы развиваем 
-            технические навыки, выносливость и командную работу.
+            СпайкМастерс — это современная волейбольная секция для спортсменов всех возрастов и уровней подготовки
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <Card>
-            <CardHeader className="flex flex-row items-center gap-4">
-              <Trophy className="h-8 w-8 text-primary" />
-              <div>
-                <CardTitle>Наши достижения</CardTitle>
-                <CardDescription>Чемпионы региональных соревнований</CardDescription>
-              </div>
-            </CardHeader>
-            <CardContent>
-              <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-                <li>Победители городской спартакиады 2023</li>
-                <li>Серебряные призеры кубка области</li>
-                <li>Участники всероссийских соревнований</li>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div>
+            <img 
+              src="https://images.unsplash.com/photo-1574279606130-09958dc756f7?q=80&w=2538&auto=format&fit=crop&ixlib=rb-4.0.3" 
+              alt="Тренировка волейбольной команды" 
+              className="rounded-lg shadow-xl w-full h-[400px] object-cover"
+            />
+          </div>
+          
+          <div className="space-y-6">
+            <div>
+              <h3 className="text-2xl font-bold mb-2">Наша миссия</h3>
+              <p className="text-gray-700">
+                Мы стремимся развивать волейбол в Новосибирске, обучая спортсменов всех возрастов техникам, стратегиям и командной работе, необходимым для достижения успеха как на любительском, так и на профессиональном уровне.
+              </p>
+            </div>
+            
+            <div>
+              <h3 className="text-2xl font-bold mb-2">Наши ценности</h3>
+              <ul className="list-disc list-inside text-gray-700 space-y-2">
+                <li>Профессиональное развитие и индивидуальный подход к каждому спортсмену</li>
+                <li>Сильный командный дух и поддержка на всех этапах обучения</li>
+                <li>Открытость для всех уровней подготовки, от новичков до профессионалов</li>
+                <li>Участие в городских и региональных соревнованиях</li>
               </ul>
-            </CardContent>
-          </Card>
-          
-          <Card>
-            <CardHeader className="flex flex-row items-center gap-4">
-              <Users className="h-8 w-8 text-primary" />
-              <div>
-                <CardTitle>Наша команда</CardTitle>
-                <CardDescription>Профессионалы своего дела</CardDescription>
-              </div>
-            </CardHeader>
-            <CardContent>
-              <p className="text-muted-foreground">
-                Наши тренеры имеют высшее спортивное образование и многолетний опыт 
-                подготовки спортсменов различного уровня. Мы знаем, как раскрыть 
-                потенциал каждого игрока.
+            </div>
+            
+            <div>
+              <h3 className="text-2xl font-bold mb-2">Наши достижения</h3>
+              <p className="text-gray-700">
+                За время существования наша команда завоевала более 15 медалей на региональных турнирах и подготовила 5 игроков для профессиональных клубов.
               </p>
-            </CardContent>
-          </Card>
-          
-          <Card>
-            <CardHeader className="flex flex-row items-center gap-4">
-              <Award className="h-8 w-8 text-primary" />
-              <div>
-                <CardTitle>Наша философия</CardTitle>
-                <CardDescription>Развитие через спорт</CardDescription>
-              </div>
-            </CardHeader>
-            <CardContent>
-              <p className="text-muted-foreground">
-                Мы верим, что волейбол - это не только спорт, но и путь к 
-                формированию характера, дисциплины и командного духа. 
-                Наша цель - воспитать не только хороших игроков, но и достойных людей.
-              </p>
-            </CardContent>
-          </Card>
+            </div>
+          </div>
         </div>
       </div>
     </section>

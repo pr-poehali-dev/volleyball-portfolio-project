@@ -8,8 +8,12 @@ const Header = () => {
     <header className="w-full bg-primary text-white p-4 shadow-md">
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
         <div className="flex items-center mb-4 md:mb-0">
-          <img src="/placeholder.svg" alt="Логотип" className="w-12 h-12 mr-3" />
-          <h1 className="text-2xl font-bold">ВолейКоманда</h1>
+          <img 
+            src="https://images.unsplash.com/photo-1588492069485-d05b56b2831d?q=80&w=1364&auto=format&fit=crop&ixlib=rb-4.0.3" 
+            alt="Логотип" 
+            className="w-12 h-12 mr-3 rounded-full border-2 border-accent" 
+          />
+          <h1 className="text-2xl font-bold">СпайкМастерс</h1>
         </div>
         
         <NavigationMenu>
