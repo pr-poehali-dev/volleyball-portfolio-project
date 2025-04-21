@@ -10,10 +10,10 @@ const Header = () => {
         <div className="flex items-center mb-4 md:mb-0">
           <img 
             src="https://images.unsplash.com/photo-1588492069485-d05b56b2831d?q=80&w=1364&auto=format&fit=crop&ixlib=rb-4.0.3" 
-            alt="Логотип" 
+            alt="Логотип ВолейСфера" 
             className="w-12 h-12 mr-3 rounded-full border-2 border-accent" 
           />
-          <h1 className="text-2xl font-bold">СпайкМастерс</h1>
+          <h1 className="text-2xl font-bold">ВолейСфера</h1>
         </div>
         
         <NavigationMenu>
@@ -58,30 +58,30 @@ const Header = () => {
             </NavigationMenuItem>
             
             <NavigationMenuItem>
-              <Link to="#schedule" className={cn(
+              <a href="#schedule" className={cn(
                 "group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors",
                 "bg-primary text-primary-foreground hover:bg-accent hover:text-white focus:bg-accent focus:text-white focus:outline-none"
               )}>
                 Расписание
-              </Link>
+              </a>
             </NavigationMenuItem>
             
             <NavigationMenuItem>
-              <Link to="#gallery" className={cn(
+              <a href="#gallery" className={cn(
                 "group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors",
                 "bg-primary text-primary-foreground hover:bg-accent hover:text-white focus:bg-accent focus:text-white focus:outline-none"
               )}>
                 Галерея
-              </Link>
+              </a>
             </NavigationMenuItem>
             
             <NavigationMenuItem>
-              <Link to="#contact" className={cn(
+              <a href="#contact" className={cn(
                 "group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors",
                 "bg-primary text-primary-foreground hover:bg-accent hover:text-white focus:bg-accent focus:text-white focus:outline-none"
               )}>
                 Контакты
-              </Link>
+              </a>
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>

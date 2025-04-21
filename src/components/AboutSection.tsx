@@ -1,51 +1,81 @@
 
-import { Separator } from "@/components/ui/separator";
+import { Card, CardContent } from "@/components/ui/card";
+import { Award, Timer, Users } from "lucide-react";
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-20 bg-volleyball-pattern">
+    <section id="about" className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">О нашей секции</h2>
-          <Separator className="mx-auto w-24 bg-accent h-1 mb-4" />
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            СпайкМастерс — это современная волейбольная секция для спортсменов всех возрастов и уровней подготовки
+          <h2 className="text-3xl font-bold text-primary mb-4">О нашей секции</h2>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            Волейбольная секция "ВолейСфера" — это место, где каждый может научиться играть в волейбол 
+            независимо от начального уровня подготовки
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div>
-            <img 
-              src="https://images.unsplash.com/photo-1574279606130-09958dc756f7?q=80&w=2538&auto=format&fit=crop&ixlib=rb-4.0.3" 
-              alt="Тренировка волейбольной команды" 
-              className="rounded-lg shadow-xl w-full h-[400px] object-cover"
-            />
-          </div>
+        <div className="grid md:grid-cols-3 gap-8">
+          <Card className="border-none shadow-lg hover:shadow-xl transition-shadow">
+            <CardContent className="pt-6">
+              <div className="flex flex-col items-center text-center">
+                <div className="rounded-full bg-primary/10 p-4 mb-4">
+                  <Award className="h-8 w-8 text-primary" />
+                </div>
+                <h3 className="font-bold text-xl mb-2">10+ лет опыта</h3>
+                <p className="text-gray-600">
+                  Наша секция работает более 10 лет и воспитала множество талантливых игроков
+                </p>
+              </div>
+            </CardContent>
+          </Card>
           
-          <div className="space-y-6">
-            <div>
-              <h3 className="text-2xl font-bold mb-2">Наша миссия</h3>
-              <p className="text-gray-700">
-                Мы стремимся развивать волейбол в Новосибирске, обучая спортсменов всех возрастов техникам, стратегиям и командной работе, необходимым для достижения успеха как на любительском, так и на профессиональном уровне.
-              </p>
-            </div>
-            
-            <div>
-              <h3 className="text-2xl font-bold mb-2">Наши ценности</h3>
-              <ul className="list-disc list-inside text-gray-700 space-y-2">
-                <li>Профессиональное развитие и индивидуальный подход к каждому спортсмену</li>
-                <li>Сильный командный дух и поддержка на всех этапах обучения</li>
-                <li>Открытость для всех уровней подготовки, от новичков до профессионалов</li>
-                <li>Участие в городских и региональных соревнованиях</li>
-              </ul>
-            </div>
-            
-            <div>
-              <h3 className="text-2xl font-bold mb-2">Наши достижения</h3>
-              <p className="text-gray-700">
-                За время существования наша команда завоевала более 15 медалей на региональных турнирах и подготовила 5 игроков для профессиональных клубов.
-              </p>
-            </div>
+          <Card className="border-none shadow-lg hover:shadow-xl transition-shadow">
+            <CardContent className="pt-6">
+              <div className="flex flex-col items-center text-center">
+                <div className="rounded-full bg-primary/10 p-4 mb-4">
+                  <Users className="h-8 w-8 text-primary" />
+                </div>
+                <h3 className="font-bold text-xl mb-2">Профессиональные тренеры</h3>
+                <p className="text-gray-600">
+                  Наши тренеры имеют многолетний опыт игры и тренерской работы
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+          
+          <Card className="border-none shadow-lg hover:shadow-xl transition-shadow">
+            <CardContent className="pt-6">
+              <div className="flex flex-col items-center text-center">
+                <div className="rounded-full bg-primary/10 p-4 mb-4">
+                  <Timer className="h-8 w-8 text-primary" />
+                </div>
+                <h3 className="font-bold text-xl mb-2">Удобное расписание</h3>
+                <p className="text-gray-600">
+                  Мы предлагаем гибкое расписание тренировок утром, днем и вечером
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+        
+        <div className="mt-16 grid md:grid-cols-2 gap-8 items-center">
+          <div>
+            <h3 className="text-2xl font-bold text-primary mb-4">Наша философия</h3>
+            <p className="text-gray-600 mb-4">
+              Мы верим, что волейбол — это не только спорт, но и образ жизни. Наши тренировки направлены на 
+              развитие не только физических навыков, но и командного духа, лидерства и уверенности в себе.
+            </p>
+            <p className="text-gray-600 mb-4">
+              В "ВолейСфере" мы создаем дружескую атмосферу, где каждый может раскрыть свой потенциал, 
+              независимо от возраста и уровня подготовки.
+            </p>
+          </div>
+          <div className="rounded-lg overflow-hidden shadow-lg">
+            <img 
+              src="https://images.unsplash.com/photo-1574271143303-822f0a0a6de1?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3" 
+              alt="Волейбольная тренировка" 
+              className="w-full h-auto"
+            />
           </div>
         </div>
       </div>

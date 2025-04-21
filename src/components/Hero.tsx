@@ -13,10 +13,10 @@ const Hero = () => {
       <div className="container mx-auto px-4 z-20 relative">
         <div className="max-w-2xl text-white">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-            СпайкМастерс: путь к вершинам волейбола
+            ВолейСфера: раскрой свой потенциал
           </h1>
           <p className="text-lg md:text-xl mb-8">
-            Раскройте свой потенциал под руководством профессиональных тренеров в современном спортивном комплексе Новосибирска
+            Присоединяйтесь к нашей секции волейбола и тренируйтесь под руководством профессиональных тренеров
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button size="lg" className="bg-accent hover:bg-accent/90 text-white">
@@ -29,7 +29,7 @@ const Hero = () => {
         </div>
       </div>
       
-      <div className="absolute bottom-0 right-0 w-[300px] h-[300px] opacity-30 animate-float">
+      <div className="absolute bottom-0 right-0 w-[300px] h-[300px] opacity-30">
         <img src="https://images.unsplash.com/photo-1578353022142-09264fd64295?q=80&w=2593&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Volleyball" className="w-full h-full object-contain" />
       </div>
     </div>
